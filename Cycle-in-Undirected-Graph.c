@@ -1,3 +1,4 @@
+
 bool dfs(vector<int>& vis,vector<vector<int> >& adj,int i,int par){
     vis[i]=1;
 
@@ -13,6 +14,7 @@ bool dfs(vector<int>& vis,vector<vector<int> >& adj,int i,int par){
 }
 int Solution::solve(int A, vector<vector<int> > &B) {
     vector<int> vis(A+2,0);
+//     main task was to make this adjacency array, then the same approach is used for dfs
     vector<vector<int> > adj(A+1);
     for(int i=0;i<B.size();i++){
         adj[B[i][0]].push_back(B[i][1]);
